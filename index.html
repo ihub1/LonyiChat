@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LonyiChat</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="auth-section">
+    <div id="login-form">
+      <h1>Welcome to LonyiChat</h1>
+      <input type="email" id="email" placeholder="Enter your email">
+      <input type="password" id="password" placeholder="Enter your password">
+      <button id="login-btn">Login</button>
+      <button id="signup-btn">Sign Up</button>
+    </div>
+
+    <div id="signup-form" style="display: none;">
+      <h1>Sign Up</h1>
+      <input type="text" id="username-signup" placeholder="Choose a username">
+      <input type="email" id="email-signup" placeholder="Enter your email">
+      <input type="password" id="password-signup" placeholder="Enter your password">
+      <button id="signup-submit-btn">Create Account</button>
+      <button id="back-to-login-btn">Back to Login</button>
+    </div>
+  </div>
+
+  <div id="chat-section" style="display: none">
+    <div class="chat-header">
+      <button id="profile-btn"><i class="fas fa-user"></i> Profile</button>
+      <button id="logout-btn"><i class="fas fa-sign-out-alt"></i></button>
+    </div>
+
+    <div id="profile-modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeProfileModal()">&times;</span>
+        <h2>Your Profile</h2>
+        <p>Username: <span id="modal-username"></span></p>
+        <p>Email: <span id="modal-email"></span></p>
+      </div>
+    </div>
+
+    <div id="user-search-bar">
+      <input type="text" id="user-search-input" placeholder="Search for a user">
+    </div>
+    <ul id="user-search-results"></ul>
+
+    <div id="current-chat-user"></div>
+
+    <div id="messages"></div>
+
+    <div class="message-input-section">
+      <input type="text" id="message-input" placeholder="Type a message">
+      <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+    </div>
+
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
