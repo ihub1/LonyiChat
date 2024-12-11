@@ -1,0 +1,249 @@
+/* General Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif; /* Added font family */
+}
+
+/* Body Styling */
+
+body {
+  background-color: #f4f4f9;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Container Styling */
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* General Input Styling */
+
+input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input Focus Effect */
+
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Authentication Section */
+
+#auth-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#auth-section input {
+  margin-bottom: 15px;
+}
+
+#auth-section button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 12px;
+}
+
+#auth-section button:last-child {
+  margin-bottom: 0;
+}
+
+#auth-section button:hover {
+  background-color: #0056b3;
+}
+
+/* Message Input Section */
+
+.message-input-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 12px 20px;
+  border-top: 1px solid #ccc;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  border-radius: 20px 20px 0 0;
+}
+
+.message-input-section input {
+  flex: 1;
+  border-radius: 18px;
+  margin-right: 12px;
+  padding: 12px 18px;
+  border: 1px solid #ccc;
+}
+
+.message-input-section button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 18px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.message-input-section button:hover {
+  background-color: #218838;
+}
+
+/* Chat Header Styles */
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.chat-header button {
+  background-color: transparent;
+  border: none;
+  padding: 10px 14px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chat-header button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header button:active {
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon Styles */
+
+.chat-header button i {
+  margin-right: 5px;
+  font-size: 1.2em;
+}
+
+/* Style for the profile button icon */
+
+#profile-btn i {
+  color: #3498db;
+}
+
+/* Style for the logout button icon */
+
+#logout-btn i {
+  color: #e74c3c;
+}
+
+/* User Search Results */
+
+#user-search-results {
+  display: none;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 300px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+  .container {
+    padding: 12px;
+  }
+
+  .message-input-section button {
+    padding: 10px 14px;
+  }
+}
+
+/* Center align profile details in modal */
+#profile-modal .modal-content {
+  text-align: center;
+}
+
+/* Message Container Styles */
+.message-container {
+  display: flex;
+  justify-content: flex-start; /* Align messages to the left */
+  margin-bottom: 15px;
+}
+
+/* My Message Styles */
+.my-message {
+  background-color: #0084FF; /* Blue background for my messages */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin-left: 40px; /* Adjust this value to move messages right */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  max-width: 80%; /* Limit message width */
+  align-self: flex-end; /* Align my messages to the right */
+}
+
+/* Other User Message Styles */
+.other-message {
+  background-color: #f2f2f2; /* Light gray background for other user messages */
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin-right: 40px; /* Adjust this value to move messages right */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  max-width: 80%; /* Limit message width */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 600px) {
+  .my-message,
+  .other-message {
+    margin-left: 20px; /* Adjust margin for smaller screens */
+    margin-right: 20px; /* Adjust margin for smaller screens */
+  }
+}
